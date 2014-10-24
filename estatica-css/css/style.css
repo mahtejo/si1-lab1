@@ -1,0 +1,76 @@
+body {
+    cursor: crosshair;
+}
+
+hr {
+    border: 0.5px outset darkblue;
+    opacity: 50;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2.3em;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 1px dashed darkcyan;
+    font: 25pt;
+    font-family: segoe print;
+    letter-spacing: 1.5px;
+    color: lightskyblue;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    background: #218b7d;
+    background-size: 15px;
+    color: white;
+}
+
+#div1 {
+    float: left;
+    overflow: auto;
+    width: 385px;
+    height: 300px;
+    border: 2px solid #218b7d;
+    margin: 0px 10px 15px -10px;
+
+}
+
+#oque {
+    margin: 0px 10px -10px 15px;
+    font-family: "Courier New";
+    font-size: 13pt;
+}
+
+#porqueSI1 {
+    font-family: "Courier New";
+    font-size: 13pt;
+}
+
+#form {
+    font-family: "Courier New";
+    font-size: 13pt;
+}
+
+#obg {
+    font-family: "Courier New";
+    font-size: 13pt;
+}
+
+ul {
+    color: #218b7d;
+}
+
+a {
+    cursor: sw-resize;
+    text-decoration:blink;
+    color: cornflowerblue;
+}
+
+a:hover {
+    letter-spacing: 2px;
+    color: darkgray;
+}
