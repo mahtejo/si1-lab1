@@ -1,0 +1,1 @@
+Este repositório contém toda a implementação do Lab 1 da disciplina Sistemas de Informação 1.
