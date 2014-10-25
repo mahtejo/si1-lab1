@@ -1,7 +1,3 @@
-body {
-    cursor: crosshair;
-}
-
 hr {
     border: 0.5px outset darkblue;
     opacity: 50;
@@ -16,7 +12,7 @@ h1 {
     text-align: center;
     border-bottom: 1px dashed darkcyan;
     font: 25pt;
-    font-family: segoe print;
+    font-family: Lucida Sans Unicode;
     letter-spacing: 1.5px;
     color: #218b7d;
 }
@@ -45,17 +41,7 @@ h2 {
     font-size: 13pt;
 }
 
-#porqueSI1 {
-    font-family: "Courier New";
-    font-size: 13pt;
-}
-
-#form {
-    font-family: "Courier New";
-    font-size: 13pt;
-}
-
-#obg {
+#porqueSI1, #form, #obg  {
     font-family: "Courier New";
     font-size: 13pt;
 }
@@ -65,12 +51,13 @@ ul {
 }
 
 a {
-    cursor: sw-resize;
     text-decoration:blink;
     color: cornflowerblue;
 }
 
 a:hover {
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: darkgray;
+    text-decoration: underline;
+    cursor: hand;
 }
