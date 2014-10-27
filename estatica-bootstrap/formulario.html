@@ -6,15 +6,24 @@
 </head>
 <body id="form">
 <link rel="stylesheet" href="css/bootstrap.css">
-<h1> Formulário de Cadastro de Novo Aluno</h1>
-<br><form>
-    <p> Para se inscrever na disciplina, preencha o formulário abaixo:<br><br>
-    <p> Nome Completo: <input type="text" name="nome" size="52px"><br></p>
-    <p>Matrícula: <input type="text" name="matricula" size="58px"><br></p>
-    <p> Período: <input type="text" name="periodo" size="61.5px"><br></p>
-    <p>E-mail institucional: <input type="text" name="email" size="42.5px"><br></p>
-    <p><input type="checkbox" name="prerequisitos"> Cursei todas as disciplinas pré-requisitos</p><br>
-    <p><a href="obrigado.html"><input type="button" name="cadastro" value="Cadastrar"></a></p></p>
-</form>
+<div class="container">
+    <div class="jumbotron">
+<h1>Cadastro de Aluno</h1>
+        </div>
+<br>
+Para se inscrever na disciplina, preencha o formulário abaixo:<br><br>
+
+    <div class="input-group" >
+    <span class="form-group">
+        Nome Completo: <input type="text" name="nome" size="54px"><br></p>
+        Matrícula: <input type="text" name="matricula" size="60px"><br></p>
+        Período: <input type="text" name="periodo" size="61.5px"><br></p>
+        E-mail institucional: <input type="text" name="email" size="51px"><br></p>
+        <input type="checkbox" name="prerequisitos"> Cursei todas as disciplinas pré-requisitos</p><br>
+    </span>
+    </div>
+    <a class="btn btn-lg btn-danger" href="index.html" role="button">Voltar</a>
+    <a class="btn btn-lg btn-success" href="obrigado.html" role="button">Cadastrar</a>
+</div>
 </body>
 </html>

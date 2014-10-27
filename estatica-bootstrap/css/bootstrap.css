@@ -228,6 +228,7 @@ th {
   p,
   h2,
   h3 {
+    text-align: justify;
     orphans: 3;
     widows: 3;
   }
@@ -1101,6 +1102,8 @@ h6,
 }
 p {
   margin: 0 0 10px;
+  text-indent: 3em;
+  text-align: justify;
 }
 .lead {
   margin-bottom: 20px;
@@ -1395,6 +1398,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  text-align: justify;
 }
 @media (min-width: 768px) {
   .container {
@@ -1426,6 +1430,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  text-align: justify;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -4545,10 +4550,11 @@ a.list-group-item.active > .badge,
   margin-left: 3px;
 }
 .jumbotron {
+  text-align: center;
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .jumbotron h1,
 .jumbotron .h1 {
