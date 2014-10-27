@@ -1,21 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Obrigado!</title>
-</head>
-<body id="obg">
-<link rel="stylesheet" href="css/bootstrap.css">
-<div class="container">
-    <div class="jumbotron">
-<h1>Obrigado! </h1>
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Obrigado!</title>
+    </head>
+    <body id="obg">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <div class="container">
+        <div class="jumbotron">
+    <h1>Obrigado! </h1>
+            </div>
+
+    <div class="alert alert-success" role="alert">
+    Seu cadastro foi efetuado com sucesso!
+        </div><br>
+    <hr>
+        Na lista abaixo você pode inserir, mover e remover uma disciplina que você deseja cursar ou já cursou. Ao digitar o nome da disciplina no campo,
+        ela automaticamente irá para a lista de disciplinas a aprender.<br><br>
+        <div class="list-group">
+            <div class="list-group-item-text">
+                <label for="disciplina1">Adicionar Disciplina</label><br>
+                <input class="list-group-item-text" type="text" name="disciplina1" id="disciplina1">
+                <button class="btn btn-success" value="Adicionar" onclick="adicionaDisciplina()">Adicionar</button>
+                <br><br><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h2>Assuntos a aprender</h2>
+                            <hr><br>
+                            <ol>
+                                <li id="item"></li>
+                            </ol>
+                        </div>
+                        <div class="col-md-5">
+                            <h2>Assuntos já aprendidos</h2>
+                            <hr><br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-<div class="alert alert-success" role="alert">
-Seu cadastro foi enviado com sucesso!
-    </div>
+        <a class="btn btn-default" href="index.html" role="button">Voltar a Página Inicial</a>
+        </div>
 
-    <a class="btn btn-default" href="index.html" role="button">Voltar a Página Inicial</a>
-    </div>
-</body>
-</html>
+    <script>
+        $("ol").hide();
+        function adicionaDisciplina() {
+            var disc = document.getElementById("disciplina1").value;
+            if(disc != null) {
+                document.getElementById("item").innerHTML = disc;
+                document.getElementById("disciplina1").value ="";
+                $("ol").show();
+            }
+        }
+    </script>
+    </body>
+    </html>
