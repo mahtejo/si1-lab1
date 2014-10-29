@@ -59,27 +59,32 @@
 
     <div class="alert alert-success" role="alert">
         Seu cadastro foi efetuado com sucesso!
-    </div><br><br>
+    </div><br>
     <h2>Quer organizar suas disciplinas? </h2>
     <hr>
     Nós trazemos para você um recurso único (também aprendido na disciplina SI1): aqui você pode facilmente categorizar
     disciplinas adicionando-as em listas de aprendidas ou não-aprendidas. Logo abaixo você pode inserir, mover e remover
     o nome de uma disciplina que você deseja cursar ou já cursou. Ao digitar o nome da disciplina no campo indicado, ela automaticamente
     será classificada como "disciplina a aprender".<br><br>
+
+    <div class="input-group">
+        <input type="text" class="form-control" id="input">
+      <span class="input-group-btn">
+        <button class="btn btn-success" type="button" id="add">Adicionar</button>
+      </span>
+    </div>
+
     <div class="list-group">
         <div class="list-group-item-text">
-            <label for="input">Adicionar Disciplina</label><br>
-            <input class="list-group-item-text" type="text" name="disciplina1" id="input">
-            <button class="btn btn-success" value="Adicionar" id="add">Adicionar</button>
             <br><br><br>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <h3>Assuntos a aprender</h3>
                         <hr><br>
                         <ol class="list-group" id="aprender"></ol>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <h3>Assuntos já aprendidos</h3>
                         <hr><br>
                         <ol class="list-group" id="aprendidos"></ol>
@@ -88,8 +93,9 @@
             </div>
         </div>
     </div>
+    <br>
     <a class="btn btn-default" href="index.html" role="button">Voltar a Página Inicial</a>
-    <br><br>
+    <br><br><br>
 </div>
 </body>
 </html>
