@@ -8,22 +8,53 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <div class="container">
     <div class="jumbotron">
-<h1>Cadastro de Aluno</h1>
-        </div>
-<br>
-Para se inscrever na disciplina, preencha o formulário abaixo:<br><br>
-
-    <div class="input-group" >
-    <span class="form-group">
-        Nome Completo: <input type="text" name="nome" size="54px"><br></p>
-        Matrícula: <input type="text" name="matricula" size="60px"><br></p>
-        Período: <input type="text" name="periodo" size="61.5px"><br></p>
-        E-mail institucional: <input type="text" name="email" size="51px"><br></p>
-        <input type="checkbox" name="prerequisitos"> Cursei todas as disciplinas pré-requisitos</p><br>
-    </span>
+        <h1>Cadastro de Aluno</h1>
     </div>
-    <a class="btn btn-lg btn-danger" href="index.html" role="button">Voltar</a>
-    <a class="btn btn-lg btn-success" href="obrigado.html" role="button">Cadastrar</a>
+    <br>
+    Para se inscrever na disciplina, preencha o formulário abaixo:<br><br>
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="col-xs-4">
+                <label for="inputNome">Nome Completo</label>
+                <input type="text" class="form-control" id="inputNome" placeholder="Digite seu nome completo">
+            </div>
+        </div>
+
+            <div class="form-group">
+                <div class="col-xs-4">
+                <label for="inputMatricula">Matrícula</label>
+                <input type="number" class="form-control" id="inputMatricula" placeholder="Digite sua matrícula">
+            </div>
+        </div>
+            <div class="form-group">
+                <div class="col-xs-4">
+                <label for="inputPeriodo">Período</label>
+                <input type="number" class="form-control" id="inputPeriodo" placeholder="Digite seu periodo sem pontos ou hífens">
+            </div>
+        </div>
+            <div class="form-group">
+                <div class="col-xs-4">
+                <label for="inputPeriodo">Email Institucional</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu email institucional">
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Cursei todas as disciplinas pré-requisitos
+                        </label>
+                    </div>
+                </div>
+            </div>
+        <div class="container">
+            <div class="form-group">
+                    <a class="btn btn-lg btn-danger" href="index.html" role="button">Voltar</a>
+                    <a class="btn btn-lg btn-success" href="obrigado.html" role="button">Cadastrar</a>
+                </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

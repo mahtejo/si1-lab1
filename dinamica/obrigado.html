@@ -1,93 +1,95 @@
-        <!DOCTYPE html>
-            <html>
-            <head lang="en">
-                <meta charset="UTF-8">
-                <title>Obrigado!</title>
-                <script src="jquery-2.1.1.js"></script>
-                <script>
-                    $(document).ready(function(){
-                         $("#add").click(function (){
-                       if($("#input").val() == "") {
-                            alert("Você deve inserir pelo menos um caractere para adicionar a lista.");
-                        }
-                        else {
-                           $("#aprender").append("<li class=\"list-group-item ng-binding ng-scope\">"+  $("#input").val() +
-                                   "<span class=\"pull-right\">" +
-                                   "<button type=\"button\" class=\"btn btn-xs btn-success\" id=\"mover-aprendidos\"><span class=\"glyphicon glyphicon-arrow-right\"></span></button>"
-                                   + "<button class=\"btn btn-xs\" id=\"remover\"> <span class=\"glyphicon glyphicon-trash\"></span></button>" +
-                                   "</span></li>");
-                           document.getElementById("input").value ="";
-                        }
-                    });
-                        $("#aprender").on("click", "#mover-aprendidos", function() {
-                            var parent = $(this).parent().parent();
-                            var text = parent.text();
-                            parent.hide('fast', function(){ $target.remove(); });
-                            $("#aprendidos").append("<li class=\"list-group-item ng-binding ng-scope\">"+ text +
-                                    "<span class=\"pull-right\">" + "<button type=\"button\" class=\"btn btn-xs btn-success\" id=\"mover-aprender\"> <span class=\"glyphicon glyphicon-arrow-left\"></span></button>" +
-                                    "<button class=\"btn btn-xs\" id=\"remover\"> <span class=\"glyphicon glyphicon-trash\"></span></button>" +
-                                    "</span></li>").hide().show('fast');
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Obrigado!</title>
+    <script src="jquery-2.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function (){
+                if($("#input").val() == "") {
+                    alert("Você deve inserir pelo menos um caractere para adicionar a lista.");
+                }
+                else {
+                    $("#aprender").append("<li class=\"list-group-item ng-binding ng-scope\">"+  $("#input").val() +
+                            "<span class=\"pull-right\">" +
+                            "<button type=\"button\" class=\"btn btn-xs btn-success\" id=\"mover-aprendidos\"><span class=\"glyphicon glyphicon-arrow-right\"></span></button>"
+                            + "<button class=\"btn btn-xs\" id=\"remover\"> <span class=\"glyphicon glyphicon-trash\"></span></button>" +
+                            "</span></li>");
+                    document.getElementById("input").value ="";
+                }
+            });
+            $("#aprender").on("click", "#mover-aprendidos", function() {
+                var parent = $(this).parent().parent();
+                var text = parent.text();
+                parent.hide('fast', function(){ $target.remove(); });
+                $("#aprendidos").append("<li class=\"list-group-item ng-binding ng-scope\">"+ text +
+                        "<span class=\"pull-right\">" + "<button type=\"button\" class=\"btn btn-xs btn-success\" id=\"mover-aprender\"> <span class=\"glyphicon glyphicon-arrow-left\"></span></button>" +
+                        "<button class=\"btn btn-xs\" id=\"remover\"> <span class=\"glyphicon glyphicon-trash\"></span></button>" +
+                        "</span></li>").hide().show('fast');
 
-                        });
+            });
 
-                        $("#aprendidos").on("click", "#mover-aprender", function() {
-                            var parent = $(this).parent().parent();
-                            var text = parent.text();
-                            parent.hide('fast', function(){ $target.remove(); });
-                            $("#aprender").append("<li class=\"list-group-item ng-binding ng-scope\">"+ text +
-                                    "<span class=\"pull-right\">" + "<button type=\"button\" class=\"btn btn-xs btn-success\" id=\"mover-aprendidos\"> <span class=\"glyphicon glyphicon-arrow-right\"></span></button>" +
-                                    "<button class=\"btn btn-xs\" id=\"remover\"> <span class=\"glyphicon glyphicon-trash\"></span></button>" +
-                                    "</span></li>").hide().show('fast');
+            $("#aprendidos").on("click", "#mover-aprender", function() {
+                var parent = $(this).parent().parent();
+                var text = parent.text();
+                parent.hide('fast', function(){ $target.remove(); });
+                $("#aprender").append("<li class=\"list-group-item ng-binding ng-scope\">"+ text +
+                        "<span class=\"pull-right\">" + "<button type=\"button\" class=\"btn btn-xs btn-success\" id=\"mover-aprendidos\"> <span class=\"glyphicon glyphicon-arrow-right\"></span></button>" +
+                        "<button class=\"btn btn-xs\" id=\"remover\"> <span class=\"glyphicon glyphicon-trash\"></span></button>" +
+                        "</span></li>").hide().show('fast');
 
-                        });
+            });
 
-                        $(".list-group").on("click", "#remover", function() {
-                            var parent = $(this).parent().parent();
-                            parent.hide('slow', function(){ remove();
-                            });
-                    });
-                    });
+            $(".list-group").on("click", "#remover", function() {
+                var parent = $(this).parent().parent();
+                parent.hide('slow', function(){ remove();
+                });
+            });
+        });
 
+    </script>
+</head>
+<body id="obg">
+<link rel="stylesheet" href="css/bootstrap.css">
+<div class="container">
+    <div class="jumbotron">
+        <h1>Obrigado! </h1>
+    </div>
 
-                </script>
-            </head>
-            <body id="obg">
-            <link rel="stylesheet" href="css/bootstrap.css">
+    <div class="alert alert-success" role="alert">
+        Seu cadastro foi efetuado com sucesso!
+    </div><br><br>
+    <h2>Quer organizar suas disciplinas? </h2>
+    <hr>
+    Nós trazemos para você um recurso único (também aprendido na disciplina SI1): aqui você pode facilmente categorizar
+    disciplinas adicionando-as em listas de aprendidas ou não-aprendidas. Logo abaixo você pode inserir, mover e remover
+    o nome de uma disciplina que você deseja cursar ou já cursou. Ao digitar o nome da disciplina no campo indicado, ela automaticamente
+    será classificada como "disciplina a aprender".<br><br>
+    <div class="list-group">
+        <div class="list-group-item-text">
+            <label for="input">Adicionar Disciplina</label><br>
+            <input class="list-group-item-text" type="text" name="disciplina1" id="input">
+            <button class="btn btn-success" value="Adicionar" id="add">Adicionar</button>
+            <br><br><br>
             <div class="container">
-                <div class="jumbotron">
-            <h1>Obrigado! </h1>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3>Assuntos a aprender</h3>
+                        <hr><br>
+                        <ol class="list-group" id="aprender"></ol>
                     </div>
-
-            <div class="alert alert-success" role="alert">
-            Seu cadastro foi efetuado com sucesso!
-                </div><br>
-            <hr>
-                Na lista abaixo você pode inserir, mover e remover uma disciplina que você deseja cursar ou já cursou. Ao digitar o nome da disciplina no campo,
-                ela automaticamente irá para a lista de disciplinas a aprender.<br><br>
-                <div class="list-group">
-                    <div class="list-group-item-text">
-                        <label for="input">Adicionar Disciplina</label><br>
-                        <input class="list-group-item-text" type="text" name="disciplina1" id="input">
-                        <button class="btn btn-success" value="Adicionar" id="add">Adicionar</button>
-                        <br><br><br>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <h2>Assuntos a aprender</h2>
-                                    <hr><br>
-                                    <ol class="list-group" id="aprender"></ol>
-                                </div>
-                                <div class="col-md-5">
-                                    <h2>Assuntos já aprendidos</h2>
-                                    <hr><br>
-                                    <ol class="list-group" id="aprendidos"></ol>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-5">
+                        <h3>Assuntos já aprendidos</h3>
+                        <hr><br>
+                        <ol class="list-group" id="aprendidos"></ol>
                     </div>
                 </div>
-                <a class="btn btn-default" href="index.html" role="button">Voltar a Página Inicial</a>
-                <br><br>
-                </div>
-            </body>
-            </html>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-default" href="index.html" role="button">Voltar a Página Inicial</a>
+    <br><br>
+</div>
+</body>
+</html>
